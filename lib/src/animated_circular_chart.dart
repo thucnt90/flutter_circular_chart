@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_circular_chart/src/circular_chart.dart';
-import 'package:flutter_circular_chart/src/entry.dart';
-import 'package:flutter_circular_chart/src/painter.dart';
+import 'package:circular_chart_flutter/src/circular_chart.dart';
+import 'package:circular_chart_flutter/src/entry.dart';
+import 'package:circular_chart_flutter/src/painter.dart';
 
 // The default chart tween animation duration.
 const Duration _kDuration = const Duration(milliseconds: 300);
