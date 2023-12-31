@@ -4,14 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:circular_chart_flutter/src/tween.dart';
 
 class CircularChartSegment extends MergeTweenable<CircularChartSegment> {
-  CircularChartSegment(this.rank, this.sweepAngle, this.color);
+  CircularChartSegment(
+      this.rank, this.sweepAngle, this.color, this.strokeWidth);
 
   final int rank;
   final double? sweepAngle;
   final Color? color;
+  final double? strokeWidth;
 
   @override
-  CircularChartSegment get empty => new CircularChartSegment(rank, 0.0, color);
+  CircularChartSegment get empty =>
+      new CircularChartSegment(rank, 0.0, color, strokeWidth);
 
   @override
   bool operator <(CircularChartSegment other) => rank < other.rank;
@@ -28,6 +31,7 @@ class CircularChartSegment extends MergeTweenable<CircularChartSegment> {
       begin.rank,
       lerpDouble(begin.sweepAngle, end.sweepAngle, t),
       Color.lerp(begin.color, end.color, t),
+      begin.strokeWidth,
     );
   }
 }
