@@ -83,7 +83,7 @@ class _AnimatedRadialChartExampleState
     TextStyle _labelStyle = Theme
         .of(context)
         .textTheme
-        .headline1!
+        .displayLarge!
         .merge(new TextStyle(color: labelColor));
 
     return new Scaffold(
